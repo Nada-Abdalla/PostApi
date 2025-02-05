@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+.notoSans {
+  font-family: "Noto Sans", serif !important;
+}
+.robotoSlab {
+  font-family: "Roboto Slab", serif !important;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255 255 255 / 66%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  margin: 0;
+}
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 620px;
+  max-width: 488px;
+  text-align: center;
+  height: 499px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.popupHeaderStyle {
+  top: 22% !important;
+  width: 528px !important;
+  left: 50% !important;
+  transform: translate(-50%, 1px) !important;
+  box-shadow: none !important;
+  background-color: #19234b !important;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+textarea {
+  height: 60%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-color: #ccc;
+  box-shadow: 0 2px 4px 0 #ccc;
+  padding: 16px;
+}
+textarea:active,
+textarea:focus {
+  outline: none;
+}
+div {
+  border-radius: 8px;
+}
+.btnCreatPost,
+.btnDeletePost {
+  right: 0px !important;
+  background-color: #020253 !important;
+  color: white !important;
+  width: 490px !important;
+  height: 48px !important;
+  border-radius: 8px !important;
+  position: relative !important;
+  cursor: pointer !important;
+}
+.searchInput {
+  border-radius: 8px;
+  border: 1px solid #ccc !important;
+  border-radius: 8px;
+  height: 50px;
+  width: 90.5%;
+  padding-inline: 16px;
+  margin-right: 16px;
+}
+.btnCloseStyle {
+  background-color: transparent !important;
+  border: none !important;
+  outline: none !important;
+  color: white !important;
+  width: 64px !important;
+  transform: translate(29px, 0);
+}
+.P-Popupheader {
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+  position: relative;
+  transform: translate(-50%, 0);
+  left: 50%;
+}
+.MuiInputLabel-root {
+  color: rgba(0, 0, 0, 46%) !important;
+}
+
+
+.AppbarStyle {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  position: static !important;
+}
+.toolbarStyle {
+  display: flex;
+  justify-content: space-between;
+}
+.btnCreatStyle {
+  background-color: #19234b !important;
+  color: white !important;
+  width: 170px !important;
+  height: 50px !important;
+}
+.searchIconStyle {
+  display: inline-block !important;
+  width: 50px !important;
+  background-color: #19234b !important;
+  height: 50px !important;
+}
+.popupHeaderStyle {
+  top: 22% !important;
+  width: 528px !important;
+  left: 50% !important;
+  transform: translate(-50%, 1px) !important;
+  box-shadow: none !important;
+  background-color: #19234b !important;
+}
+.popupDeleteStyle {
+  width: 370px;
+  height: 230px;
+  padding: 18px;
+  border-radius: 6px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cardDelete {
+  width: 370px !important;
+  height: 230px !important;
+  border-radius: 6px !important;
+  padding: 18px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  text-align: center !important;
+}
+.hDeleteCard {
+  font-size: 20px !important;
+  font-weight: 500 !important;
+  color: rgba(0, 0, 0, 1) !important;
+}
+.pOneDeleteCard {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  color: rgba(0, 0, 0, 1) !important;
+}
+.pTwoDeleteCard {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  color: rgb(92, 92, 92, 1) !important;
+}
+.btnDeleteCard {
+  width: 154px !important;
+  border-radius: 4px !important;
+  padding: 10px !important;
+  box-shadow: 0 3px 2px -1px rgba(0, 0, 0, 0.2) !important;
+  background-color: #19234b !important;
+  color: white !important;
+}
+.btnCansleDelete {
+  right: 6px;
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.87);
+  color: rgba(0, 0, 0, 0.87);
+  width: 154px;
+  height: 48px;
+  border-radius: 8px;
+  position: relative;
+  cursor: pointer;
+}
+input {
+  outline: none;
+  border: none;
+}
+input:active,
+input:hover,
+input:focus {
+  outline: none !important;
+}
+.gridStyle {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  padding-inline: 1rem !important;
+}
+.css-hxbzlh-MuiGrid2-root {
+  width: auto !important;
+}
+.hover:hover {
+  border: 2px solid rgba(25, 35, 75, 1);
+}
+.pId {
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  color: rgba(112, 112, 112, 1);
+  width: 80px;
+}
+.titleStyle {
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  color: rgba(0, 0, 0, 1) !important;
+}
+.bodyStyle {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  color: rgba(0, 0, 0, 1);
+}
+.css-niqf4j-MuiStack-root > :not(style):not(style) {
+  margin: 0 !important;
+}
