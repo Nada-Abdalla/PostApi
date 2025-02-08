@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Card, IconButton, Button } from "@mui/material";
+import { Card, IconButton, Button, Modal } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { postApi } from "../../../app/postServices";
 import "./Popup.css";
@@ -23,16 +23,14 @@ export const DeletePost = ({ id }: DeletePostProps) => {
         <DeleteIcon sx={{ fontSize: "1.2rem" }} />
       </IconButton>
       {deleteMss && (
-        <div className="modal">
+        <Modal open={deleteMss} onClose={toggleModalDelete} className="modal">
           <Card className="cardDelete">
             <h2 className="hDeleteCard notoSans">Delete Post</h2>
             <div>
               <p className="pOneDeleteCard notoSans">
                 Are you sure you want to delete this Post
               </p>
-              <p
-                className="pTwoDeleteCard notoSans"
-              >
+              <p className="pTwoDeleteCard notoSans">
                 This Action Cannot be Reversed
               </p>
             </div>
@@ -61,7 +59,7 @@ export const DeletePost = ({ id }: DeletePostProps) => {
               </Button>
             </div>
           </Card>
-        </div>
+        </Modal>
       )}
     </>
   );
