@@ -17,7 +17,7 @@ export const CardPost = ({ post }: CardPostProps) => {
       sx={{ boxShadow: "0 2px 4px 0 rgba(0, 0, 0, 0.25)", overflow: "hidden" }}
       className="hover"
     >
-      <CardHeaderPost id={id} title={title} />
+      <CardHeaderPost id={id} title={title} body={body} />
       <Typography
         variant="body2"
         sx={{

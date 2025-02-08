@@ -21,40 +21,38 @@ export const SearchPost = () => {
   };
 
   return (
-    <>
-      <Stack direction={"row"} spacing={1.5}>
-        <TextField
-          size="small"
-          placeholder="Search by ID"
-          value={value}
-          onChange={onChange}
-          sx={{
-            "& .MuiOutlinedInput-root": {
-              "&:hover .MuiOutlinedInput-notchedOutline": {
-                borderColor: "rgba(0, 0, 0, 0.23)",
-              },
-              "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-                borderColor: "rgba(0, 0, 0, 0.23)",
-              },
-              "&:active": {
-                borderColor: "rgba(0, 0, 0, 0.23)",
-              },
+    <Stack direction={"row"} spacing={1.5}>
+      <TextField
+        size="small"
+        placeholder="Search by ID"
+        value={value}
+        onChange={onChange}
+        sx={{
+          "& .MuiOutlinedInput-root": {
+            "&:hover .MuiOutlinedInput-notchedOutline": {
+              borderColor: "rgba(0, 0, 0, 0.23)",
             },
-          }}
-        />
-        <Button
-          size="small"
-          variant="contained"
-          onClick={onClick}
-          sx={{
-            alignSelf: "center",
-            height: "40px",
-            backgroundColor: "rgba(25, 35, 75, 1)",
-          }}
-        >
-          <SearchIcon />
-        </Button>
-      </Stack>
-    </>
+            "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+              borderColor: "rgba(0, 0, 0, 0.23)",
+            },
+            "&:active": {
+              borderColor: "rgba(0, 0, 0, 0.23)",
+            },
+          },
+        }}
+      />
+      <Button
+        size="small"
+        variant="contained"
+        onClick={onClick}
+        sx={{
+          alignSelf: "center",
+          height: "40px",
+          backgroundColor: "rgba(25, 35, 75, 1)",
+        }}
+      >
+        <SearchIcon />
+      </Button>
+    </Stack>
   );
 };

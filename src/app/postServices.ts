@@ -43,11 +43,7 @@ export const postApi = createApi({
           const { data: updatedPost } = await queryFulfilled;
           dispatch(
             postApi.util.updateQueryData("getPosts", undefined, (posts) => {
-              const post = posts.find((p) => p.id === args.id);
-              if (post) {
-                post.title = args.title;
-                post.body = args.body;
-              }
+              return posts.map((p) => (p.id === args.id ? updatedPost : p));
             })
           );
         } catch (error) {
@@ -60,9 +56,8 @@ export const postApi = createApi({
         url: `/${id}`,
         method: "DELETE",
       }),
-      onQueryStarted: async (id, { dispatch, queryFulfilled }) => {
+      onQueryStarted: async (id, { dispatch }) => {
         try {
-          const { data: deletePost } = await queryFulfilled;
           dispatch(
             postApi.util.updateQueryData("getPosts", undefined, (posts) => {
               return posts.filter((post) => post.id !== Number(id));
@@ -72,7 +67,7 @@ export const postApi = createApi({
       },
     }),
 
-    creatPost: builder.mutation<Post, CreatePostArgs>({
+    createPost: builder.mutation<Post, CreatePostArgs>({
       query: (args) => ({
         url: "",
         method: "POST",
