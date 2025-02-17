@@ -1,50 +1,32 @@
-# React + TypeScript + Vite
+# Mock APIs Task
+  -Task Link : (https://syntheia.atlassian.net/browse/SG3-3329)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ ## Overview
 
-Currently, two official plugins are available:
+This project integrates a mock API to perform CRUD operations on posts. 
+The application is built using **React**, with state management handled by **Redux Toolkit (RTK)**, 
+and UI components styled using **Material-UI (MUI)**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## API Integration
 
-## Expanding the ESLint configuration
+- Integrated **JSONPlaceholder** API for CRUD operations.
+- **Endpoints Used**:
+  - `GET /posts` - Get all posts
+  - `GET /posts/:id` - Get a single post
+  - `POST /posts` - Create a new post
+  - `PUT /posts/:id` - Update a post
+  - `DELETE /posts/:id` - Delete a post
+- API Documentation: [JSONPlaceholder API](https://jsonplaceholder.typicode.com)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## State Management
 
-- Configure the top-level `parserOptions` property like this:
+- **Redux Toolkit (RTK)** used for managing the posts state.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## UI Components
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- Built the UI using **Material-UI (MUI)** components, following Abdalla's design.
+- Design reference: [Figma Design](https://www.figma.com/design/hK5Qq5LVPZeSqz0kIfdr79/Form?node-id=0-1&p=f&t=FojJP9Dsm6znBwvu-0)
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Form Handling (Bonus)
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- Implemented **React Hook Form** for handling forms when creating and updating posts.
