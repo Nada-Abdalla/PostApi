@@ -6,7 +6,7 @@ This project integrates a mock API to perform CRUD operations on posts.
 The application is built using **React**, with state management handled by **Redux Toolkit (RTK)**, 
 and UI components styled using **Material-UI (MUI)**.
 
-> **Note:** This project was developed as part of my internship at **[Syntheia](https://syntheia.io)*.  
+> **Note:** This project was developed as part of my internship at [Syntheia](https://syntheia.io).  
 
 ## API Integration
 
